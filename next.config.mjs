@@ -4,9 +4,9 @@ const nextConfig = {
   images:{
     remotePatterns:[
       {
-      protocol:'http',
-      hostname:'localhost',
-      pathname: '/wp-content/uploads/**',
+      protocol:process.env.NEXT_PUBLIC_API_PROTOCOL,
+      hostname:process.env.NEXT_PUBLIC_API_HOSTNAME,
+      pathname: process.env.NEXT_PUBLIC_API_PATH_NAME,
     }]
   }
 };
