@@ -16,7 +16,7 @@ function PostItem({ post, loading = "lazy", priority = false }) {
         />
         <div className="p-5">
           <h3 className="mb-5 text-[22px] font-bold xl:text-[28px]">
-            <Link href={`/posts/${post.id}`}>{post.title}</Link>
+            <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
 
           <p className="text-[17px] xl:text-xl min-h-[84px]">{post.excerpt}</p>

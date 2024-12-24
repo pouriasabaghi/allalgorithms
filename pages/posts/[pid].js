@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
   const paths = posts.map((post) => ({
     params: {
-      pid: post.id.toString(),
+      pid: post.slug.toString(),
     },
   }));
 

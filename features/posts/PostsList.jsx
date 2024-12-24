@@ -7,7 +7,7 @@ function PostsList({ posts }) {
         <PostItem
           loading={index < 3 ? "eager" : "lazy"}
           priority={index === 0}
-          key={post.id}
+          key={post.slug}
           post={post}
         />
       ))}
