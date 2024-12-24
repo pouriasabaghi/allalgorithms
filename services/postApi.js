@@ -8,3 +8,14 @@ export const getPosts = async () => {
     console.error(error);
   }
 };
+
+export const getPost = async (postId) => {
+  try {
+    if (postId === undefined) throw new Error("postId is undefined");
+
+    const posts = await http.get(`/api/v1/posts/${postId}`);
+    return posts.data;
+  } catch (error) {
+    console.error(error);
+  }
+};

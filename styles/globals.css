@@ -12,3 +12,85 @@ body {
 ._container{
   @apply mx-auto max-w-[1280px] px-4 2xl:px-0;
 }
+
+/* Content */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  @apply font-bold  mb-4;
+}
+.content li h1,
+.content li h2,
+.content li h3,
+.content li h4,
+.content li h5,
+.content li h6 {
+  @apply mb-0 inline-block;
+}
+
+.content h1 {
+  @apply text-4xl lg:text-6xl capitalize;
+}
+.content h2 {
+  @apply text-3xl lg:text-4xl;
+}
+.content h3 {
+  @apply text-2xl;
+}
+.content h4 {
+  @apply text-xl;
+}
+.content h5 {
+  @apply text-lg;
+}
+.content h6 {
+  @apply text-lg;
+}
+.content ul p,
+.content ul span,
+.content ol p,
+.content ol span,
+.content p {
+  @apply text-base lg:text-lg ;
+}
+
+.content > p,
+.content div > p,
+.content ul,
+.content ol
+ {
+  @apply mb-3;
+}
+
+.content {
+  line-height: 205%;
+}
+.aligncenter {
+  @apply block mx-auto lg:mx-0;
+}
+.content img {
+  @apply rounded-lg max-w-full my-2;
+}
+.content figure {
+  @apply max-w-full;
+}
+
+.content p:has(+ ul) {
+  @apply !mb-1  text-base;
+}
+.content ul li,
+.content ol li {
+  @apply text-base  font-normal px-2  ;
+}
+
+.content li::before {
+  content: '';
+  @apply w-[6px] h-[6px]  bg-white inline-block rounded-full me-4 shrink-0;
+}
+
+.content a {
+  @apply text-blue-500 font-bold underline;
+}

@@ -1,23 +1,23 @@
+import { Geist, Geist_Mono } from "next/font/google";
 import PostsList from "@/features/posts/PostsList";
 import { getPosts } from "@/services/postApi";
-import http from "@/utils/http";
-import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home({ posts }) {
   return (
     <>
+    <Head>
+      <title>AllAlgorithms | All Programming Principles </title>
+      <meta name="description" content="Discover proven programming principles like DRY, KISS, and more with AllAlgorithms. Simplify your coding process and optimize your software development practices." />
+    </Head>
       <main
-        className={`${geistSans.variable} ${geistMono.variable} _container font-[family-name:var(--font-geist-sans)]`}
+        className={`${geistSans.variable} _container font-[family-name:var(--font-geist-sans)]`}
       >
         <section className="md:pt-10">
           <h1 className="mb-2 text-3xl font-bold">
@@ -29,13 +29,6 @@ export default function Home({ posts }) {
           <PostsList posts={posts} />
         </section>
       </main>
-      <footer className="_container py-10 text-xs text-gray-400">
-        © 2024 AllAlgorithms. Built with passion, shared with developers
-        worldwide &nbsp;|&nbsp;
-        <a className="text-blue-600" href="mailto:pouriasabaghi@gmail.com">
-          contact
-        </a>
-      </footer>
     </>
   );
 }
