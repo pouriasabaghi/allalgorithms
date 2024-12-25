@@ -19,7 +19,9 @@ function PostItem({ post, loading = "lazy", priority = false }) {
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </h3>
 
-          <p className="text-[17px] xl:text-xl min-h-[84px]">{post.excerpt}</p>
+          <p className="text-[17px] md:min-h-[102px] xl:min-h-[112px] xl:text-xl">
+            {post.excerpt}
+          </p>
         </div>
       </article>
     </li>
