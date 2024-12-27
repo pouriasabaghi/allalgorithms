@@ -15,8 +15,12 @@ export default function App({ Component, pageProps }) {
       <footer className="_container py-10 text-xs text-gray-400">
         © 2024 AllAlgorithms. Built with passion, shared with developers
         worldwide &nbsp;|&nbsp;
-        <a className="text-blue-600" href="mailto:pouriasabaghi@gmail.com">
-          contact
+        <a className="text-blue-600 align-middle" target="_blank" rel="nofollow" href="https://www.linkedin.com/in/pouria-sabaghi-ba052730b/">
+          LinkedIn
+        </a>
+        &nbsp;|&nbsp;
+        <a className="text-blue-600 align-middle" rel="nofollow" href="mailto:pouriasabaghi@gmail.com">
+          Contact
         </a>
       </footer>
     </>
